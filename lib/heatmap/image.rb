@@ -11,7 +11,7 @@ module Heatmap
       bounds = Heatmap::Geometry.bounds(area, 100)
 
       # Creating a blank canvas
-      system("convert -size #{bounds.width}x#{bounds.height} pattern:gray10 #{file.path}")
+      system("convert -size #{bounds.width}x#{bounds.height} #{file.path}")
 
       # Drawing each area
       compose = ["convert #{file.path}"]
