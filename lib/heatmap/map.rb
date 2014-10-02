@@ -15,6 +15,7 @@ module Heatmap
 
     def output(file = 'heatmap.png')
       Heatmap::Image.new(@area, file)
+      system("convert #{file.path} -alpha set -channel RGBA -fuzz 1% -fill none -floodfill +0+0 black please_work.png")
     end
 
   end
