@@ -12,7 +12,7 @@ module Heatmap
 
       # Creating a blank canvas
       # system("convert -alpha Transparent -size #{bounds.width}x#{bounds.height} canvas:white #{file.path}")
-      # system("convert -size #{bounds.width}x#{bounds.height} pattern:gray100 #{file.path}")
+      # system("convert -size #{bounds.width}x#{bounds.height} canvas:white #{file.path}")
       system("convert trans.png -alpha set -channel a -evaluate set 0%+channel #{file.path}")
       # system("convert #{file.path} -transparent black NikeProd.png")
       # system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
@@ -31,10 +31,10 @@ module Heatmap
       system("mogrify -channel A -fx \"A*0.50\" #{file.path}")
 
       file.close
-      system("convert #{file.path} -alpha set -channel a -evaluate set 15%+channel please_work2.png")
-      system("convert #{file.path} -alpha set -channel a -evaluate set 50%+channel please_work3.png") 
-      system("convert #{file.path} -alpha set -channel a -evaluate set 75%+channel please_work4.png") 
-      system("convert #{file.path} -alpha set -channel a -evaluate set 95%+channel please_work5.png")  
+      system("convert #{file.path} -alpha set -channel K -evaluate set 15%+channel please_work2.png")
+      system("convert #{file.path} -alpha set -channel K -evaluate set 50%+channel please_work3.png") 
+      system("convert #{file.path} -alpha set -channel K -evaluate set 75%+channel please_work4.png") 
+      system("convert #{file.path} -alpha set -channel K -evaluate set 95%+channel please_work5.png")  
     end
 
   end
