@@ -12,7 +12,7 @@ module Heatmap
 
       # Creating a blank canvas
       # system("convert -alpha Transparent -size #{bounds.width}x#{bounds.height} canvas:white #{file.path}")
-      system("convert kitty.png")
+      system("convert kitty.png #{file.path}")
       # system("convert #{file.path} -transparent black NikeProd.png")
       # system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
       # system("convert #{file.path} -alpha transparent #{file.path}")
