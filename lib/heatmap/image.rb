@@ -12,7 +12,8 @@ module Heatmap
 
       # Creating a blank canvas
       # system("convert -size #{bounds.width}x#{bounds.height} pattern:bricks #{file.path}")
-      system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
+      # system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
+      system("convert #{file.path} -alpha transparent #{file.path}")
 
       # Drawing each area
       compose = ["convert #{file.path}"]
