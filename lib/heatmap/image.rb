@@ -11,7 +11,8 @@ module Heatmap
       bounds = Heatmap::Geometry.bounds(area, 100)
 
       # Creating a blank canvas
-      system("convert -alpha Transparent -size #{bounds.width}x#{bounds.height} pattern:bricks #{file.path}")
+      # system("convert -alpha Transparent -size #{bounds.width}x#{bounds.height} canvas:white #{file.path}")
+       system("convert -size #{bounds.width}x#{bounds.height} pattern:bricks #{file.path}")
       # system("convert kitty.png #{file.path}")
       # system("convert #{file.path} -transparent black NikeProd.png")
       # system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
