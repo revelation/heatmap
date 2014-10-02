@@ -20,7 +20,7 @@ module Heatmap
       # Drawing each area
       compose = ["convert #{file.path}"]
       compose << area.map{|area| "-page #{area.x_y} #{POINT.path}" }
-      compose << "-alpha remove -layers flatten #{file.path}"
+      compose << "-layers flatten #{file.path}"
       system(compose * ' ')
 
       # Applying color with a LUT
