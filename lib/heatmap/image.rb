@@ -31,7 +31,10 @@ module Heatmap
       system("mogrify -channel A -fx \"A*0.50\" #{file.path}")
 
       file.close
-      system("convert #{file.path} -alpha set -channel a -evaluate set 15%+channel please_work2.png") 
+      system("convert #{file.path} -alpha set -channel a -evaluate set 15%+channel please_work2.png")
+      system("convert #{file.path} -alpha set -channel a -evaluate set 50%+channel please_work3.png") 
+      system("convert #{file.path} -alpha set -channel a -evaluate set 75%+channel please_work4.png") 
+      system("convert #{file.path} -alpha set -channel a -evaluate set 95%+channel please_work5.png")  
     end
 
   end
