@@ -12,6 +12,8 @@ module Heatmap
 
       # Creating a blank canvas
       system("convert -size #{bounds.width}x#{bounds.height} xc:none #{file.path}")
+      puts "file path:"
+      puts file.path
       # system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
       # system("convert #{file.path} -alpha transparent #{file.path}")
 
