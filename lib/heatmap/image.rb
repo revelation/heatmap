@@ -28,7 +28,8 @@ module Heatmap
 
       # Apply a default 50% opacity
       system("mogrify -channel A -fx \"A*0.50\" #{file.path}")
-      system("convert #{file.path} -alpha set -channel RGBA -fuzz 1% -fill none -floodfill +0+0 black -shave 1x1 please_work.png") 
+      system("convert #{file.path} -alpha set -channel RGBA -fuzz 1% -fill none -floodfill +0+0 black please_work.png")
+      system("convert #{file.path} -alpha set -channel RGBA -fuzz 1% -fill none -floodfill +0+0 black please_work2.png") 
 
       file.close
     end
