@@ -28,7 +28,7 @@ module Heatmap
       system("convert -channel ALL -clut #{file.path} #{GRADIENT.path} #{file.path}")
 
       # Apply a default 50% opacity
-      system("mogrify -channel A -fx \"A*0.50\" #{file.path}")
+      system("mogrify -channel A -fx \"A*0.85\" #{file.path}")
 
       file.close 
     end
