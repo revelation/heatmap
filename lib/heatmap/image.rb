@@ -12,7 +12,7 @@ module Heatmap
 
       # Creating a blank canvas
       # system("convert -alpha Transparent -size #{bounds.width}x#{bounds.height} canvas:white #{file.path}")
-      system("convert -size 3264x2448 canvas:white #{file.path}")
+      system("convert -size 720x960 canvas:white #{file.path}")
       # system("convert trans.png -alpha set -channel a -evaluate set 0%+channel #{file.path}")
       # system("convert #{file.path} -transparent black NikeProd.png")
       # system("convert -size #{bounds.width}x#{bounds.height} -alpha transparent #{file.path}")
@@ -25,7 +25,7 @@ module Heatmap
       system(compose * ' ')
 
       # Applying color with a LUT
-      system("convert -channel ALL -clut #{file.path} #{GRADIENT.path} #{file.path}")
+      # system("convert -channel ALL -clut #{file.path} #{GRADIENT.path} #{file.path}")
 
       # Apply a default 50% opacity
       system("mogrify -channel A -fx \"A*0.50\" #{file.path}")
