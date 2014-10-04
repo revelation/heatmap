@@ -19,6 +19,8 @@ module Heatmap
       # system("convert #{file.path} -alpha transparent #{file.path}")
 
       # Drawing each area
+      puts "AREA:"
+      puts area
       compose = ["convert #{file.path}"]
       compose << area.map{|area| "-page #{area.x_y} #{POINT.path}" }
       compose << "-layers flatten #{file.path}"
