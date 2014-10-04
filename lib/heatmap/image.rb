@@ -8,7 +8,7 @@ module Heatmap
       raise(ArgumentError, "Area needs to be an array of Heatmap::Area objects") if area.empty?
 
       file   = File.new(file, 'w')
-      bounds = Heatmap::Geometry.bounds(area, 100)
+      bounds = Heatmap::Geometry.bounds(area, 25)
 
       # Creating a blank canvas
       # system("convert -alpha Transparent -size #{bounds.width}x#{bounds.height} canvas:white #{file.path}")
