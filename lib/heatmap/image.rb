@@ -27,7 +27,7 @@ module Heatmap
       system(compose * ' ')
 
       # Applying color with a LUT
-      system("convert -channel ALL -interpolate Average -clut #{file.path} #{GRADIENT.path} #{file.path}")
+      system("convert -channel ALL -interpolate BiLinear -clut #{file.path} #{GRADIENT.path} #{file.path}")
 
       # Apply a default 50% opacity
       system("mogrify -channel A -fx \"A*0.85\" #{file.path}")
